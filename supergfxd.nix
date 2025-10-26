@@ -3,7 +3,7 @@
   services.supergfxd = {
    enable = true;
    settings = {
-     mode = "AsusMuxDgpu";
+     mode = "Hybrid";
      vfio_enable =  true;
      vfio_save =  true;
      always_reboot =  false;
