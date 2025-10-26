@@ -7,8 +7,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.	
-      ./hardware-configuration.nix
-      ./supergfxd.nix
+      #./hardware-configuration.nix  #commented for portability reasons.
+      ./supergfxd.nix #ASUS Notebook-specific application, remove if needed.
     ];
 
   # Bootloader.
