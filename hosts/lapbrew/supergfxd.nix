@@ -1,4 +1,3 @@
-#This file is mainly for select ASUS Notebooks, general install may skip this file if needed.
 {
   services.supergfxd = {
    enable = true;

@@ -48,8 +48,9 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = false;
+  services.xserver.enable = true;
   services.xserver.displayManager.startx.enable = false; 
+  services.xserver.windowManager.i3.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -103,13 +104,6 @@
   hardware.graphics.extraPackages = with pkgs; [
     rocmPackages.clr.icd
   ];
-
-  services = {
-    asusd = {
-      enable = true;
-      enableUserService = true;
-    };
-  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
