@@ -16,7 +16,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub = {
     enable = true;
-    # devices = [ "nodev" ];
+    device = "nodev";
     efiSupport = true;
     useOSProber = true;
   };
@@ -127,7 +127,8 @@
 	 tree
 	 alacritty
          lshw
-	 caligula 
+	 caligula
+	 gparted 
   ];
 
 
