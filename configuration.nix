@@ -128,7 +128,8 @@
 	 alacritty
          lshw
 	 caligula
-	 gparted 
+	 gparted
+	 dosfstools 
   ];
 
 
