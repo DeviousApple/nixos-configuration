@@ -12,14 +12,14 @@
     ];
 
   # Bootloader.
-  # boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev";
-    efiSupport = true;
-    useOSProber = true;
-  };
+  # boot.loader.grub = {
+   # enable = true;
+   # device = "nodev";
+   # efiSupport = true;
+   # useOSProber = true;
+ # };
 
   # Disk Encryption
   boot.initrd.luks.devices."luks-950ab67a-8dae-4740-8838-3fd82f7bab20".device = "/dev/disk/by-uuid/950ab67a-8dae-4740-8838-3fd82f7bab20";
