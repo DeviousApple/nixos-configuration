@@ -123,7 +123,8 @@
          lshw
 	 caligula
 	 gparted
-	 dosfstools 
+	 dosfstools
+	 pavucontrol 
   ];
 
 
