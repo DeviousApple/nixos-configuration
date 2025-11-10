@@ -53,10 +53,18 @@
       autoRepeatInterval = 35;
   };
 
-  services.desktopManager.plasma6.enable = true;
   services.displayManager.ly.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true; 
+  };
+
+  programs.waybar = {
+    enable = true;
+  }; 
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -125,6 +133,9 @@
 	 gparted
 	 dosfstools
 	 pavucontrol 
+	 mako
+	 wofi
+	 waybar
   ];
 
 
