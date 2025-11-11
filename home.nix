@@ -64,7 +64,7 @@
        	 color: #ebcb8b;
        }
      '';
-  }; 
+ }; 
  
  wayland.windowManager.sway = {
      enable=true;
