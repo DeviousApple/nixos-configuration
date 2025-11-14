@@ -49,6 +49,7 @@
   # disable this if you're only using the Wayland session.
   services.xserver = {
       enable = true;
+      videoDrivers = [ "nvidia" ];
       autoRepeatDelay = 200;
       autoRepeatInterval = 35;
   };
@@ -66,6 +67,24 @@
   programs.waybar = {
     enable = true;
   }; 
+
+  
+  hardware.graphics = {
+     enable = true;
+  };
+  
+  hardware.nvidia = {
+     open = true;
+     modesetting.enable = true;
+     powerManagement.enable = true;
+     powerManagement.finegrained = true;
+     prime = {
+        offload.enable = true;
+        nvidiaBusId = "PCI:1:0:0";
+        amdgpuBusId = "PCI:65:0:0";
+     };
+  };
+  
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -105,7 +124,8 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  
+  nixpkgs.config.allowUnfreePredicate = true;
+
   hardware.graphics.extraPackages = with pkgs; [
     rocmPackages.clr.icd
   ];
